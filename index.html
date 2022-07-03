@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>JS EXAM</title>
+    <link rel="icon" type="image/gif/png" href="img/titleImg.png">
+</head>
+<body>
+    <div id="side-nav">
+        <div id="side-nav-info">
+            <div class="ul-content w-100 mx-2">
+                <ul class="list-group w-100">
+                    <li class="list-group-item bg-transparent" id="NowPlaying">Now playing</li>
+                    <li class="list-group-item bg-transparent" id="Popular">Popular</li>
+                    <li class="list-group-item bg-transparent" id="TopRated">Top Rated</li>
+                    <li class="list-group-item bg-transparent"id="Trending">Trending</li>
+                    <li class="list-group-item bg-transparent" id="Upcoming">Upcoming</li>
+                    <a href="#ContactUs"><li class="list-group-item bg-transparent" >Contact Us</li></a>
+                </ul>
+            </div>
+            <div class="web-links my-4 w-100 px-4">
+                <i class="fa-brands fa-facebook-f mx-2"></i>
+                <i class="fa-brands fa-twitter mx-1"></i>
+                <i class="fa-solid fa-globe mx-2"></i>
+                <p class="my-3">
+                    Copyright Â© 2019 All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="side-nav-control">
+            <img src ="img/rectangular.png" class ="my-4">
+            <div class="icon1">
+            <button id="togglenav"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-globe"></i>
+                <i class="fas fa-share-alt my-3"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container w-75 py-5">
+        <div class="row">
+            <div class="col-xl-6 ">
+                <input onkeyup="findMovies(this.value)" type="search" class="searchByWord bg-transparent form-control w-100 p-2"placeholder="get movies by word...">
+            </div>
+            <div class="col-xl-6 ">
+                <input onkeyup="findMovies(this.value)" type="search" class="searchByAny bg-transparent form-control w-100 p-2" placeholder="search...">
+            </div>
+        </div>
+    </div>
+    <div class="container w-75 py-3" >
+        <div class="row" id="moviesContainer">
+    
+        </div>
+    </div>
+    <div class="container w-75 ">
+        <div class="row">
+            <div class="col-sm-10 ">
+                <h2 class="my-5" id="ContactUs">ContacUs...</h2>
+            </div>
+            
+            <div class="col-sm-6 ">
+                <input onkeyup="isValidName(this.value)" type="input" id="name" class="w-100 p-2 form-control bg-transparent "placeholder="Enter Your Name">
+            </div>
+            <div class="col-sm-6 ">
+                <input onkeyup="isValidMail(this.value)" type="email" id="email" class="w-100 p-2 form-control bg-transparent" placeholder="Enter Email">
+            </div>
+            
+            <div class="col-sm-6">
+                <div class="errorbox p-3 d-none" id="errorname">Your Name is not valid</div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="errorbox p-3 d-none "id="errormail">entre valid email</div>
+            </div>
+            
+            <div class="col-sm-6 ">
+                <input onkeyup="isValidPhonr(this.value)" type="number" class="w-100 p-2 form-control bg-transparent"placeholder="Enter Phone">
+            </div>
+            <div class="col-sm-6 ">
+                <input onkeyup="isValidAge(this.value)" type="number" class="w-100 p-2 form-control bg-transparent" placeholder="Enter Age">
+            </div>
+
+            
+            <div class="col-sm-6">
+                <div class="errorbox p-3 d-none"id="errorphone">entre valid phone</div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="errorbox p-3 d-none"id="errorAge">entre valid Age</div>
+            </div>
+            
+
+            <div class="col-sm-6 ">
+                <input onkeyup="isValidPass(this.value)"  type="input" class="w-100 p-2 form-control bg-transparent"placeholder="Enter Password">
+            </div>
+            <div class="col-sm-6 ">
+                <input onkeyup="isValidEqual(this.value)" type="input" class="w-100 p-2 form-control bg-transparent" placeholder="Enter RePassword">
+            </div>
+
+            <div class="col-sm-6">
+                <div class="errorbox p-3 d-none"id="errorpass">entre valid password *Minimum eight characters, at least one letter and one number:*</div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="errorbox p-3 d-none" id="errorrepass">entre valid Repassword</div>
+            </div>
+
+            <div class="col-sm-6 ">
+                <button type="submit" class="btn btn-outline-danger my-3">submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/movie.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+</body>
+</html>
